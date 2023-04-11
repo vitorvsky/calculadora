@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body{
+            background-image: url("https://thumbs.dreamstime.com/b/padr%C3%A3o-escuro-com-calculadora-e-r%C3%A9guas-papel-de-parede-sem-costura-215064484.jpg");
+        }
+        .conteudo{
+            background-color: rgb(182, 240, 199);
+            font-size: medium;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            opacity: 0.9;
+            border: 10px solid #999;
+            width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+        };
+    </style>
+</head>
+<body>
+    <div class="conteudo">
+        <h1 class="conteudo">Qual sua conta?</h1>
+        <form action="">
+            <input type="number" class="conteudo" name="v1" id="v1" placeholder="Valor 1">
+            <input type="number" class="conteudo" name="v2" id="v2" placeholder="Valor 2">
+            <input type="submit" class="conteudo" id="send" value="Somar"> 
+        </form>
+    </div>
+
+    <script>
+       //var nome = window.prompt('Qual o seu nome?')
+      // window.alert('Obrigado por acessar essa página, ' + nome + "💜")
+
+       var botao= document.querySelector('#send');
+
+       botao.addEventListener("click", function(e){
+        e.preventDefault();
+        
+        var v1 = document.querySelector("#v1");
+        var v2 = document.querySelector("#v2");
+
+        var n1 = +v1.value;
+        var n2 = +v2.value;
+
+        var resultado = n1 + n2
+        window.alert("O resultado da sua soma é: " + resultado) 
+
+       } )
+    </script>
+
+</body>
+
+</html>
